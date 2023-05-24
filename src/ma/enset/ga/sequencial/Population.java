@@ -8,6 +8,8 @@ public class Population {
     List<Individual> individuals=new ArrayList<>();
     Individual firstFitness;
     Individual secondFitness;
+    private String alphabet="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
     Random rnd=new Random();
     public void initialaizePopulation(){
         for (int i=0;i<30;i++){
@@ -27,7 +29,7 @@ public class Population {
     //croisement
     public void crossover(){
 
-        int pointCroisment=rnd.nextInt(5);
+        int pointCroisment=rnd.nextInt(4-0);
         pointCroisment++;
         Individual individual1=new Individual();
         Individual individual2=new Individual();
@@ -46,12 +48,13 @@ public class Population {
         individuals.set(individuals.size()-1,individual2);
     }
     public void mutation(){
-       int index=rnd.nextInt(7);
-        Random random = new Random();
-           individuals.get(individuals.size()-2).getGenes()[index]=(char) (random.nextInt(26) + 'A');
+        int index=rnd.nextInt(7);
+        int index2=rnd.nextInt(26);
+        individuals.get(individuals.size()-2).getGenes()[index]=alphabet.charAt(index2);
         index=rnd.nextInt(7);
-         random = new Random();
-            individuals.get(individuals.size()-1).getGenes()[index]=(char) (random.nextInt(26) + 'A');
+        index2=rnd.nextInt(26);
+
+        individuals.get(individuals.size()-1).getGenes()[index]=alphabet.charAt(index2);
     }
 
     public List<Individual> getIndividuals() {
