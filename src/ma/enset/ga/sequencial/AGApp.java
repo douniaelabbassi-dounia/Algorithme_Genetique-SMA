@@ -4,8 +4,8 @@ import java.util.Arrays;
 import java.util.Random;
 
 public class AGApp {
-    private static final int MAX_IT=800;
-    private static final int MAX_FITNESS=10;
+    private static final int MAX_IT=1000;
+    private static final int MAX_FITNESS=7;
     public static void main(String[] args) {
 
        Population population=new Population();
