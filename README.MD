@@ -10,4 +10,4 @@
  <h5>Les stratégies d’évolution</h5>
  Une stratégie d’évolution définit les mécanismes qui permettent de passer d’une génération d’individus à une autre. Le nombre maximal de générations est un paramètre de la stratégie d’évolution qui arrête le processus itératif en cas de non‑convergence de l’algorithme (BACK et al., 2000; DREO et al., 2003; PELIKAN et al., 2003).
    <h4>Exécution </h4>
-<img src="CAPTURES/.png">
+<img src="1.png">
